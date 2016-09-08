@@ -121,7 +121,27 @@ $(document).ready(function () {
 
 <div id="fitting-code" class="section level2">
 <h2>Fitting code</h2>
-<pre class="r"><code>fit = lm(Ozone~Wind,data=airquality)</code></pre>
+<pre class="r"><code>fit = lm(Ozone~Wind,data=airquality)
+summary(fit)</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = Ozone ~ Wind, data = airquality)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -51.572 -18.854  -4.868  15.234  90.000 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)  96.8729     7.2387   13.38  &lt; 2e-16 ***
+## Wind         -5.5509     0.6904   -8.04 9.27e-13 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 26.47 on 114 degrees of freedom
+##   (37 observations deleted due to missingness)
+## Multiple R-squared:  0.3619, Adjusted R-squared:  0.3563 
+## F-statistic: 64.64 on 1 and 114 DF,  p-value: 9.272e-13</code></pre>
 </div>
 <div id="fitting-plot" class="section level2">
 <h2>Fitting plot</h2>
